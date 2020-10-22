@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>おみくじ</title>
+</head>
+<body>
+
+<header>
+    <h1>🎍おみくじ🎍</h1>
+</header>
+
+<main>
+    <ul>
+        <li id="pull">おみくじを引く</li>
+    </ul>
+    <p id="echo">"おみくじを引く"をクリックしてね</p>
+    <p id="echo2">今日の運勢が占えるよ</p>
+</main>
+
+
+<script>
+//Clickイベントのブロック
+const pull = document.querySelector("#pull");
+pull.onclick = function(){
+    //乱数を作る
+    const num = Math.ceil(Math.random() * 6);
+
+    //乱数をIF分岐処理で分ける
+    //条件に合っていればalert()で表示
+    if(num==1){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "おめでとう！😆";
+        echo.style.color= "#dab300";
+        echo.style.fontSize= "90px";
+        echo2.innerHTML= '<img src="omikuji_daikichi.png">';
+    }
+    if(num==2){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "やったね！😄";
+        echo.style.color= "#b9c3c9";
+        echo.style.fontSize= "70px";
+        echo2.innerHTML= '<img src="omikuji_chuukichi.png">';
+    }
+    if(num==3){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "まあまあだね😊";
+        echo.style.color= "#c47022";
+        echo.style.fontSize= "50px";
+        echo2.innerHTML= '<img src="omikuji_syoukichi.png">';
+    }
+    if(num==4){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "気にせず今日1日頑張ろう！😀";
+        echo.style.color= "#000000";
+        echo.style.fontSize= "40px";
+        echo2.innerHTML= '<img src="omikuji_kichi.png">';
+    }
+    if(num==5){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "落ち込まないで今日1日頑張ろう！😀";
+        echo.style.color= "#000000";
+        echo.style.fontSize= "30px";
+        echo2.innerHTML= '<img src="omikuji_suekichi.png">';
+    }
+    if(num==6){
+        const echo = document.querySelector("#echo");
+        echo.innerHTML= "凶でも良い1日になりますように...😌";
+        echo.style.color= "#000000";
+        echo.style.fontSize= "30px";
+        echo2.innerHTML= '<img src="omikuji_kyou.png">' ;
+    }
+}
+</script>
+</body>
+</html>
