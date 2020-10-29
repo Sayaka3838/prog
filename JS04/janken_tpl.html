@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん 💻 🔥VS🔥 👤</h1>
+  <h2>グー チョキ パー それぞれ2回ずつ勝負して何点稼げるかな？</h2>
+  <h3>7点以上🥇    6点🥈    5点🥉    4点以下🏅</h3>
+</header>
+
+<main>
+ 
+  <ul>
+    <li id="gu_btn">グー</li>
+    <li id="cho_btn">チョキ</li>
+    <li id="par_btn">パー</li>
+  </ul>
+  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+  <div id="judgment">結果は？</div>
+  <div id="judgment2"></div>
+  
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+$("#gu_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#pc_hands").html("グー");
+        $("#judgment").html("あいこ😶 +1点");
+        $("#judgment2").html('<img src="draw.jpeg">');
+    }
+    if(num == 2){
+        $("#pc_hands").html("チョキ");
+        $("#judgment").html("あなたの勝ち😄 +2点");
+        $("#judgment2").html('<img src="win.png">');
+    }
+    if(num == 3){
+        $("#pc_hands").html("パー");
+        $("#judgment").html("あなたの負け😢");
+        $("#judgment2").html('<img src="lose.png">');
+    }
+});
+$("#cho_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#pc_hands").html("グー");
+        $("#judgment").html("あなたの負け😢");
+        $("#judgment2").html('<img src="lose.png">');
+    }
+    if(num == 2){
+        $("#pc_hands").html("チョキ");
+        $("#judgment").html("あいこ😶 +1点");
+        $("#judgment2").html('<img src="draw.jpeg">');
+    }
+    if(num == 3){
+        $("#pc_hands").html("パー");
+        $("#judgment").html("あなたの勝ち😄 +2点");
+        $("#judgment2").html('<img src="win.png">');
+    }
+});
+$("#par_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#pc_hands").html("グー");
+        $("#judgment").html("あなたの勝ち😄 +2点");
+        $("#judgment2").html('<img src="win.png">');
+    }
+    if(num == 2){
+        $("#pc_hands").html("チョキ");
+        $("#judgment").html("あなたの負け😢");
+        $("#judgment2").html('<img src="lose.png">');
+    }
+    if(num == 3){
+        $("#pc_hands").html("パー");
+        $("#judgment").html("あいこ😶 +1点");
+        $("#judgment2").html('<img src="draw.jpeg">');
+    }
+});
+
+</script>
+</body>
+</html>
