@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sample.css">
+    <title>Document</title>
+</head>
+
+<header>
+    駐車料金
+</header>
+
+<body>
+    【江東区】<h1></h1>
+    【千代田区】<h2></h2>
+    【港区】<h3></h3>
+
+<script>
+    function kake(a,b){
+        const k = a * b;
+        return k;
+    }
+    function kake(a,b){
+        const t = a * b;
+        return t;
+    }
+    function kake(a,b){
+        const m = a * b;
+        return m;
+    }
+
+    //a=駐車時間(単位：時間),b=1時間当たりの駐車料金
+
+    const k = kake(1,100);
+    const t = kake(1,300);
+    const m = kake(1,500);
+    
+    document.querySelector("h1").innerHTML=k;
+    document.querySelector("h2").innerHTML=t;
+    document.querySelector("h3").innerHTML=m;
+</script>
+
+</body>
+</html>
