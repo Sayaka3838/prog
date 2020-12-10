@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>Let's なぞなぞ！</title>
+</head>
+<body>
+  <a href="index.html"></a><img src="hatena.jpg" width="700" height="150"></a>
+<header>
+    <h1>Let's なぞなぞ！</h1>
+    <h2>1問目</h2>
+    <h3>難易度★☆☆☆☆</h3>
+    <a href="index.html"></a><img src="quiz.jpg" width="700" height="150"></a>
+</header>
+
+<main>
+  <p id="quest">ここに問題が出題されます</p>
+  <p>
+    <input type="radio" name="toi" value="1"><span id="toi1">選択肢１</span>
+    <input type="radio" name="toi" value="2"><span id="toi2">選択肢２</span>
+    <input type="radio" name="toi" value="3"><span id="toi3">選択肢３</span>
+  </p>
+  <a href="index.html"></a><img src="hatena.jpg" width="700" height="150"></a>
+</main>
+
+
+<script>
+//ここから記述領域［START］
+
+  //以下に配列を記述してください。
+  //問題文[配列]
+  const qs = [
+    "お父さんがきらいな食べ物なーんだ？",
+    "おじいちゃんとする球技は？",
+    "まっすぐ歩いても回ってしまう人は？",
+    "自分の幼少時代の事を話していたら集まってくる、親戚の子って誰？",
+    "兵庫、奈良、大阪の中で、いつも眠そうにしているのはどこの人？",
+    "しゃぶしゃぶ、おすし、焼肉。名探偵が一番好きなのはどれ？"
+  ];
+    
+  //回答選択肢[多重配列]
+  const toi = [
+  ["ゴーヤ","パパイヤ","きゅうり"],
+  ["バレーボール","テニス","ソフトボール"],
+  ["おまわりさん","お医者さん","お花屋さん"],
+  ["はとこ","いとこ","甥たち"],
+  ["兵庫","奈良","大阪"],
+  ["しゃぶしゃぶ","おすし","焼肉"]
+  ];
+    
+  //答え[配列]
+  const ans = [2, 3, 1, 3, 3, 2];
+
+  //1.最初の問題文＆回答選択肢＆回答値を設定
+  let num;
+  let i = 0;
+  num = 0;
+  $("#quest").text( qs[i] );
+  $("#toi1").text( toi[i][0] );
+  $("#toi2").text( toi[i][1] );
+  $("#toi3").text( toi[i][2] );
+    
+  //2.ラジオボタンをクリックしたらイベント発生！(クリックイベント)
+  $("[name=toi]").on("click",function(){
+    let g = 0;
+    const v = $(this).val();
+    if(ans[i] == v){
+      $("h1").text("正解！");
+      num++;
+      $("h2").text(num);
+    }else{
+      $("h1").text("不正解");
+    }
+
+
+    if(i == 5){
+      alert("終了 正解数は...");
+      alert(num);
+
+    }else if(i == 4){
+      $("h2").text("6問目");
+      $("h3").text("難易度★★★★★");
+      i++;
+      $("#quest").text( qs[i] );
+      $("#toi1").text( toi[i][0] );
+      $("#toi2").text( toi[i][1] );
+      $("#toi3").text( toi[i][2] );
+
+    }else if(i == 3){
+      $("h2").text("5問目");
+      $("h3").text("難易度★★★★☆");
+      i++;
+      $("#quest").text( qs[i] );
+      $("#toi1").text( toi[i][0] );
+      $("#toi2").text( toi[i][1] );
+      $("#toi3").text( toi[i][2] );
+
+    }else if(i == 2){
+      $("h2").text("4問目");
+      $("h3").text("難易度★★★☆☆");
+      i++;
+      $("#quest").text( qs[i] );
+      $("#toi1").text( toi[i][0] );
+      $("#toi2").text( toi[i][1] );
+      $("#toi3").text( toi[i][2] );
+
+    }else if(i == 1){
+      $("h2").text("3問目");
+      $("h3").text("難易度★★☆☆☆");
+      i++;
+      $("#quest").text( qs[i] );
+      $("#toi1").text( toi[i][0] );
+      $("#toi2").text( toi[i][1] );
+      $("#toi3").text( toi[i][2] );
+    
+    }else if(i == 0){
+    $("h2").text("2問目");
+    $("h3").text("難易度★☆☆☆☆");
+    i++;
+    $("#quest").text( qs[i] );
+    $("#toi1").text( toi[i][0] );
+    $("#toi2").text( toi[i][1] );
+    $("#toi3").text( toi[i][2] );
+    }
+  });
+
+    //本来であればグローバル変数を使うべきなのですが
+    //どうしても機能しなかったため、やむを得ず
+    //このような長いソースコードになってしまいました。申し訳ありません。
+  //ここまでが記述領域［END］
+</script>
+</body>
+</html>
