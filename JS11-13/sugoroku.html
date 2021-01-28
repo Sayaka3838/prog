@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>Boardgame</title>
+</head>
+<body>
+<header>
+    
+  <img src="saikoro.webp" width="300" height="100">
+  <h1>Board game</h1>
+  <img src="saikoro.webp" width="300" height="100">
+ 
+</header>
+
+</body>
+<main>
+ 
+  <ul>
+    <li id="s_btn">🎲</li>
+    <li id="p_btn">POINT</li>
+    <li id="r_btn">REST</li>
+    <li id="q_btn">QUIZ</li>
+ </ul>
+  
+   <div id="result"></div>
+   <div id="abc"></div>
+   <div id="kom"></div>
+   
+<table border="1" width="1000" height="100">
+    
+    <tr>
+    <td id="1"></td> <td id="2"></td> <td id="3"></td> <td id="4"></td> <td id="5"></td>
+    <td id="6"></td> <td id="7"></td> <td id="8"></td> <td id="9"></td> <td id="10"></td>
+    <td id="11"></td> <td id="12"></td> <td id="13"></td> <td id="14"></td> <td id="15"></td>
+    <td id="16"></td> <td id="17"></td> <td id="18"></td> <td id="19"></td> <td id="20"></td>
+    <td id="21"></td> <td id="22"></td> <td id="23"></td> <td id="24"></td> <td id="25"></td>
+    <td id="26"></td> <td id="27"></td> <td id="28"></td> <td id="29"></td> <td id="30"></td>
+    <td id="31"></td> <td id="32"></td> <td id="33"></td> <td id="34"></td> <td id="35"></td>
+    <td id="36"></td> <td id="37"></td> <td id="38"></td> <td id="39"></td> <td id="40"></td>
+    </tr>
+
+    <tr>
+    <td id="41"></td> <td id="42"></td> <td id="43"></td> <td id="44"></td> <td id="45"></td>
+    <td id="46"></td> <td id="47"></td> <td id="48"></td> <td id="49"></td> <td id="50"></td>
+    <td id="51"></td> <td id="52"></td> <td id="53"></td> <td id="54"></td> <td id="55"></td>
+    <td id="56"></td> <td id="57"></td> <td id="58"></td> <td id="59"></td> <td id="60"></td>
+    <td id="61"></td> <td id="62"></td> <td id="63"></td> <td id="64"></td> <td id="65"></td>
+    <td id="66"></td> <td id="67"></td> <td id="68"></td> <td id="69"></td> <td id="70"></td>
+    <td id="71"></td> <td id="72"></td> <td id="73"></td> <td id="74"></td> <td id="75"></td>
+    <td id="76"></td> <td id="77"></td> <td id="78"></td> <td id="79"></td> <td id="80"></td>
+        </tr>
+    </table> 
+</main>
+
+<footer>
+    <div id="ans"></div>
+    <div id="susumu"></div>
+</footer>
+
+<script>
+
+$("#1").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#2").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#3").on("click",function() {
+    $(this).text('+2');
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#4").on("click",function() {
+    $(this).text('Q');
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#5").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#6").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#7").on("click",function() {
+    $(this).text('R');
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#8").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#9").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#10").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#11").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#12").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#13").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#14").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#15").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#16").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#17").on("click",function() {
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#18").on("click",function() {
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#19").on("click",function() {
+    $(this).text('+4');
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#20").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#21").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#22").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#23").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#24").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#25").on("click",function() {
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#26").on("click",function() {
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#27").on("click",function() {
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#28").on("click",function() {
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#29").on("click",function() {
+    $(this).text('Q');
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#30").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#31").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#32").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#33").on("click",function() {
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#34").on("click",function() {
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#35").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#36").on("click",function() {
+    $(this).css("background-color", "#ff00ff");
+});
+
+$("#37").on("click",function() {
+    $(this).css("background-color", "#ff00ff");
+});
+
+$("#38").on("click",function() {
+    $(this).css("background-color", "#ff00ff")
+});
+
+$("#39").on("click",function() {
+    $(this).css("background-color", "#ff0080");
+});
+
+$("#40").on("click",function() {
+    $(this).html('GOAL🏳‍🌈');
+    $(this).css("background-color", "#ff0080");
+});
+
+$("#41").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#42").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#43").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#44").on("click",function() {
+    $(this).css("background-color", "#ff0000");
+});
+
+$("#45").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#46").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#47").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#48").on("click",function() {
+    $(this).css("background-color", "#ff8000");
+});
+
+$("#49").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#50").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+$("#51").on("click",function() {
+    $(this).text('+3');
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#52").on("click",function() {
+    $(this).css("background-color", "#ffff00");
+});
+
+$("#53").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#54").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#55").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#56").on("click",function() {
+    $(this).css("background-color", "#80ff00");
+});
+
+$("#57").on("click",function() {
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#58").on("click",function() {
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#59").on("click",function() {
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#60").on("click",function() {
+    $(this).text('P');
+    $(this).css("background-color", "#00ff00");
+});
+
+$("#61").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#62").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#63").on("click",function() {
+    $(this).css("background-color", "#00ff80");
+});
+
+$("#64").on("click",function() {
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#65").on("click",function() {
+    $(this).text('R');
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#66").on("click",function() {
+    $(this).css("background-color", "#00ffff");
+});
+
+$("#67").on("click",function() {
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#68").on("click",function() {
+    $(this).text('Q');
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#69").on("click",function() {
+    $(this).css("background-color", "#0080ff");
+});
+
+$("#70").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#71").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#72").on("click",function() {
+    $(this).css("background-color", "#0000ff");
+});
+
+$("#73").on("click",function() {
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#74").on("click",function() {
+    $(this).text('+3');
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#75").on("click",function() {
+    $(this).css("background-color", "#8000ff");
+});
+
+$("#76").on("click",function() {
+    $(this).css("background-color", "#ff00ff");
+});
+
+$("#77").on("click",function() {
+    $(this).css("background-color", "#ff00ff");
+});
+
+$("#78").on("click",function() {
+    $(this).css("background-color", "#ff00ff");
+});
+
+$("#79").on("click",function() {
+    $(this).css("background-color", "#ff0080");
+});
+
+$("#80").on("click",function() {
+    $(this).html('GOAL🏳‍🌈');
+    $(this).css("background-color", "#ff0080");
+});
+
+$("#s_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 6);
+    if(num == 1){
+        $("#result").html('<img src="d1.png">');
+    }
+
+    if(num == 2){
+        $("#result").html('<img src="d2.png">');
+    }
+
+    if(num == 3){
+        $("#result").html('<img src="d3.png">');
+    }
+
+    if(num == 4){
+        $("#result").html('<img src="d4.png">');
+    }
+
+    if(num == 5){
+        $("#result").html('<img src="d5.png">');
+    }
+
+    if(num == 6){
+        $("#result").html('<img src="d6.png">');
+    }
+});
+
+$("#p_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#result").html('<img src="jyu.jpg">');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+    if(num == 2){
+        $("#result").html('<img src="go.jpg">');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+    if(num == 3){
+        $("#result").html('<img src="hya.jpg">');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+});
+$("#r_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#result").html('1回休み');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+    if(num == 2){
+        $("#result").html('2回休み');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+    if(num == 3){
+        $("#result").html('相手が1回休み');
+        $("#abc").html('');
+        $("#kom").html('');
+        $("#ans").html('');
+        $("#susumu").html('');
+    }
+});
+$("#q_btn").on("click" , function(){
+    const num = Math.ceil(Math.random() * 3);
+    if(num == 1){
+        $("#result").html('メロン、スイカ、リンゴ、モモ。この４つの言葉と同じ仲間は次のうちどれ？');
+        $("#abc").html('A.手品 B.手相 C.手本');
+        $("#kom").html('答えは下');
+        $("#ans").html('答えはA');
+        $("#susumu").html('正解したら3進む');
+    }
+
+    if(num == 2){
+        $("#result").html('しめじ、しいたけ、エノキのなかで頭が良いのは次のうちどれ？');
+        $("#abc").html('A.しめじ B.しいたけ C.エノキ');
+        $("#kom").html('答えは下');
+        $("#ans").html('答えはC');
+        $("#susumu").html('正解したら3進む');
+    }
+
+    if(num == 3){
+        $("#result").html('店の中にいつもある寿司ネタは次のうちどれ？');
+        $("#abc").html('A.ウニ B.サーモン C.トロ');
+        $("#kom").html('答えは下');
+        $("#ans").html('答えはC');
+        $("#susumu").html('正解したら3進む');
+    }
+
+    if(num == 4){
+        $("#result").html('晴れの日、曇りの日、雨の日、バッターの打率が一番低くなるのはどの天気の日？');
+        $("#abc").html('A.晴れの日 B.曇りの日 C.雨の日');
+        $("#kom").html('答えは下');
+        $("#ans").html('答えはC');
+        $("#susumu").html('正解したら2進む');
+    }
+
+    if(num == 5){
+        $("#result").html('消防署で「好きな太陽系惑星は？」というアンケートをとると、いつもトップになるのは次の内のどの惑星？');
+        $("#abc").html('A.水星 B.地球 C.木星 D.火星');
+        $("#kom").html('答えは下');
+        $("#ans").html('答えはB');
+        $("#susumu").html('正解したら5進む');
+    }
+});
+</script>
+</body>
+</html>
+
+
