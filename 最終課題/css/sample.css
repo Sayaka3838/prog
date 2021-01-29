@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+    font-family: cursive;
+}
+main{
+    border-bottom:1px solid #ccc;
+}
+footer{
+   
+    text-align: center;
+}
+p{
+    font-size:30px;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:20px;
+}
+ul{
+    text-align: center;
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+
+div{
+    text-align: center;
+}
+
+li#s_btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #8484ff;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    margin-right: 30px;
+}
+li#s_btn:hover {
+    background: #87befd;
+    color:#fff;
+}
+
+
+li#p_btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #facf23;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    margin-right: 30px;
+    padding: 0;
+}
+
+li#p_btn:hover {
+   background: #f8ed1a;
+}
+
+li#r_btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #ff6347;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    margin-right: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li#r_btn:hover {
+    background: #ff9987;
+ }
+
+ li#q_btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #c631b1;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    margin-right: 30px;
+    padding: 0;
+}
+
+li#q_btn:hover {
+   background: #e390d8;
+}
+
+
+div#kom{
+font-size: 20px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#ans{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+div#susumu{
+    font-size: 20px;
+}
+
+script{
+font-size: 100px;
+}
